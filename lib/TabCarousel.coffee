@@ -35,6 +35,13 @@ class Options
       localStorage.flipWait_ms = ms
     else
       localStorage.flipWait_ms || Options.defaults.flipWait_ms
+      
+        # Accessor for user set refresh wait timing or the default.
+  refWait_ms: (ms) ->
+    if ms
+      localStorage.refWait_ms = ms
+    else
+      localStorage.refWait_ms || Options.defaults.refWait_ms
   
   # Accessor for user set automatic start preference.
   automaticStart: (value) ->
